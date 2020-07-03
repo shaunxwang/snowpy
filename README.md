@@ -215,11 +215,11 @@ folder
    ```
 3. **Create a test jupyter notebook**
    ![A](img/jupyter_001.png "Image Title")**(A)**
-
+   <br></br>
    ![B](img/jupyter_002.png "Image Title")**(B)**
-
+   <br></br>
    ![C](img/jupyter_003.png "Image Title")**(C)**
-
+   <br></br>
    ![D](img/jupyter_004.png "Image Title")**(D)**
 
    See below for the test SQL query, **my_sql.sql** which is located in **/SQLs/my_sql.sql**:
