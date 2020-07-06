@@ -164,7 +164,7 @@ folder
    ```
    Click [here](https://help.ubuntu.com/community/FilePermissions) for detailed explanation of file permissions in linux machines
 
-   It's also a good idea to add **login.txt** to **.gitignore** file so that you don't accidentially commit and push **login.txt** with your real password stored in it.
+   It's also a good idea to add **login.txt** to **.gitignore** file so that you don't accidentially ```git commit``` and ```git push``` **login.txt** with your real password to a public repository like **Github** or **Bitbucket**.
 
 ## Step 4 - **How to use **snowpy** in Jupyter notebook**
 1. **Install Jupyter notebook**
@@ -255,3 +255,99 @@ folder
    pip install feather-format
    ```
    Feather uses the [Apache Arrow](https://arrow.apache.org/) columnar memory specification to represent binary data on disk. This makes read and write operations very fast.
+
+   ## Logging
+   Both functions provide **debuggin** level of **debug** which is deepest level for logging. This level of logging allows you to see what the code has done step-by-step.
+
+   The log file, **snowflake_python_connector_log.txt** is located here:
+   ```
+   Your
+   working 
+   folder
+    |
+    ├── img
+    ├── login.txt
+    ├── __pycache__
+    ├── README.md
+    ├── requirements.txt
+    ├── 'snowflake_python_connector_log.txt' <<-----------------<
+    ├── snowpy
+    │   ├── bin
+    │   ├── include
+    │   ├── lib
+    │   ├── lib64 -> lib
+    │   ├── pyvenv.cfg
+    │   └── share
+    ├── snowpy.py
+    ├── SQLs
+    │   └── my_sql.sql
+    ├── test.ipynb
+    ├── test.ipynb.md
+    └── validate.py
+   ```
+   It's a good idea to add **snowflake_python_connector_log.txt** to **.gitignore** file so that you don't accidentially ```git commit``` and ```git push``` **snowflake_python_connector_log.txt** to a public repository like **Github** or **Bitbucket**.
+
+   ## Python Virtual Environment
+   If you chose to **download** or **clone** from [**Github**](https://github.com/shaunxwang/snowpy/archive/master.zip), the files come with a **Python virtual environment** pre-installed, located here:
+   ```
+   Your
+   working 
+   folder
+    |
+    ├── img
+    ├── login.txt
+    ├── __pycache__
+    ├── README.md
+    ├── requirements.txt
+    ├── snowflake_python_connector_log.txt
+    ├── 'snowpy'  <<----------------------------<
+    │   ├── bin
+    │   ├── include
+    │   ├── lib
+    │   ├── lib64 -> lib
+    │   ├── pyvenv.cfg
+    │   └── share
+    ├── snowpy.py
+    ├── SQLs
+    │   └── my_sql.sql
+    ├── test.ipynb
+    ├── test.ipynb.md
+    └── validate.py
+   ```
+   If you are using **VS Code** like I am, you can add the following setting to your **.vscode/settings.json** file, so that you will activate and use the pre-installed **Python virtual environment** for testing or just playing around with the two functions.
+   ```json
+   {
+    "python.pythonPath": "snowpy/bin/python"
+   }
+   ```
+   **settings.json** located here:
+
+   ```
+   Your
+   working 
+   folder
+    |   
+    ├── .git
+    ├── .gitignore
+    ├── img
+    ├── .ipynb_checkpoints
+    ├── login.txt
+    ├── README.md
+    ├── requirements.txt
+    ├── snowflake_python_connector_log.txt
+    ├── snowpy
+    │   ├── bin
+    │   ├── include
+    │   ├── lib
+    │   ├── lib64 -> lib
+    │   ├── pyvenv.cfg
+    │   └── share
+    ├── snowpy.py
+    ├── SQLs
+    │   └── my_sql.sql
+    ├── test.ipynb
+    ├── test.ipynb.md
+    ├── validate.py
+    └── '.vscode' <<----------------------------<
+        └── settings.json
+   ```
