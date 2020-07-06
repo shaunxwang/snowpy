@@ -6,7 +6,8 @@ The module contains two functions. One allows you to pull data from Snowflake an
 ```bash
 pip install snowflake-connector-python[pandas]
 ```
-Then, verify the following **Python** script to check if it's installed correctly:
+Then, save the following **Python** script as **validate.py**.
+Run it in terminal to check if the package is installed correctly:
 ```python
 import snowflake.connector
 
@@ -25,8 +26,6 @@ finally:
     cs.close()
 ctx.close()
 ```
-then save it as **validate.py**.
-
 If you not sure about which **account_name** to use like how I was, you can get **account_name** from your Snowflake login URL.
 
 If you login URL looks like the link below:
