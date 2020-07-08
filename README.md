@@ -256,7 +256,7 @@ folder
    Feather uses the [Apache Arrow](https://arrow.apache.org/) columnar memory specification to represent binary data on disk. This makes read and write operations very fast.
 
    ## Logging
-   Both functions provide **debuggin** level of **debug** which is deepest level for logging. This level of logging allows you to see what the code has done step-by-step.
+   Both functions provide **debug** level of **logging** which allows you to see what the code has done step-by-step.
 
    The log file, **snowflake_python_connector_log.txt** is located here:
    ```
@@ -350,3 +350,5 @@ folder
     └── '.vscode' <<----------------------------<
         └── settings.json
    ```
+   > :warning: <br>
+   The ```venv``` is built in linux machine, this means it does **not** have ```/Scripts/activate.bat``` or ```/Scripts/Activate.ps1``` for you to activate ```venv``` in Windows. Sorry, Windows users need to build their own ```venv``` and install packages by using ```requirements.txt```; or use [Windows subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/faq)
